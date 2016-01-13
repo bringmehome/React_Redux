@@ -2,13 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval',
     entry: [
+        // 'webpack-dev-server/client?http://192.168.7.254:3000',
         'webpack-hot-middleware/client',
         './redux/index'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, '/js/'),
         filename: 'bundle.js',
         publicPath: '/js/'
     },
